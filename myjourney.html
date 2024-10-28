@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My CSTU Story - My Journey</title>
+    <link rel="stylesheet" href="mystyle.css">
+</head>
+<body>
+    <header>
+        <h1>My Journey</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Homepage</a></li>
+                <li><a href="myjourney.html">My Journey</a></li>
+                <li><a href="myfuture.html">My Future</a></li>
+                <li><a href="https://www.youtube.com/@setthayotpanthong2881">My Projects</a></li>
+            <li><a href="https://www.instagram.com/setthayot_pt/">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <center>
+            <h2>เส้นทาง 4 ปีในรั้ว CSTU</h2>
+            <p>ตลอด 4 ปีในรั้ว CSTU ผมวางแผนเพื่อพัฒนาทักษะต่าง ๆ ที่จะนำไปต่อยอดในอนาคตได้ เช่น เช่น HTML, CSS, JavaScript </p>
+            <div class="slideshow-container">
+
+                <div class="mySlides fade">
+                  <img src="resources/com sci.jpg" style="width:750px">
+                </div>
+              
+                <div class="mySlides fade">
+                  <img src="resources/computer-programming.jpg" style="width:750px" >
+                </div>
+              
+                <div class="mySlides fade">
+                  <img src="resources/a98564d70e51251385358bacb1db89f1_XL.jpg" style="width:25%" height="200">
+                </div>
+              
+              </div>
+              
+              <script>
+              let slideIndex = 0;
+              showSlides();
+              
+              function showSlides() {
+                let i;
+                let slides = document.getElementsByClassName("mySlides");
+                for (i = 0; i < slides.length; i++) {
+                  slides[i].style.display = "none";  
+                }
+                slideIndex++;
+                if (slideIndex > slides.length) {slideIndex = 1}    
+                slides[slideIndex-1].style.display = "block";  
+                setTimeout(showSlides, 2000); 
+              }
+              </script>
+        </center>
+        <li>ปี1 ผมจะเก็บเกี่ยวประสบการณ์และเข้ากิจกรรมต่างๆที่สำคัญ</li>
+        <li>ปี2 ผมจะตั้งใจเรียนและศึกษาหาข้อมูลเกี่ยวกับ การเขียนโปรแกรมและโค้ด</li>
+        <li>ปี3 ผมจะเริ่มฝึกงานกับสถานที่ต่างๆ</li>
+        <li>ปี4  ผมจะเริ่มหาเริ่มวางแผนอนาคต เรื่องการทำงานว่าจะทำอะไรที่ไหน</li>
+        
+    
+    </main>
+    <footer>
+        <p>&copy; 2024 My CSTU Story</p>
+    </footer>
+</body>
+</html>

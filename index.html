@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My CSTU Story</title>
+    <link rel="stylesheet" href="mystyle.css">
+</head>
+<body>
+
+    <header>
+        <h1>Welcome to My CSTU Story</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Homepage</a></li>
+                <li><a href="myjourney.html">My Journey</a></li>
+                <li><a href="myfuture.html">My Future</a></li>
+            <li><a href="https://www.youtube.com/@setthayotpanthong2881">My Projects</a></li>
+            <li><a href="https://www.instagram.com/setthayot_pt/">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section>
+        <center><h2>About Me</h2>
+            <p>Hello! My name is Setthayot Panthong, and this is my story at CSTU.</p>
+          </center>
+      
+        <center>
+          <iframe width="700" height="400" src="resources/myvideo.mp4" frameborder="0"></iframe>
+        </center>
+        
+          <div class="slideshow-container">
+
+            <div class="mySlides fade">
+              <img src="resources/myself.image.jpg.jpg" style="width:25%">
+            </div>
+          
+            <div class="mySlides fade">
+              <img src="resources/453163082_524926493235131_2648095087364348061_n.jpg" style="width:25%">
+            </div>
+          
+            <div class="mySlides fade">
+              <img src="resources/457014401_482627967895161_5308398754122773960_n.jpg" style="width:30%" height="200">
+            </div>
+          
+          </div>
+          
+          <script>
+          let slideIndex = 0;
+          showSlides();
+          
+          function showSlides() {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            for (i = 0; i < slides.length; i++) {
+              slides[i].style.display = "none";  
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}    
+            slides[slideIndex-1].style.display = "block";  
+            setTimeout(showSlides, 2000); 
+          }
+          </script>
+
+        <center><p><b>I am studying in the Computer Science program at CSTU, where I have learned about various topics such as programming, web development, and more.</b></p></center>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 My CSTU Story. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
