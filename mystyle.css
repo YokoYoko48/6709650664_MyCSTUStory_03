@@ -23,25 +23,30 @@ body {
 header {
     background-color: rgba(24, 17, 17, 0.8); 
     color: #ffffff;
-    padding: 10px; /* ปรับ padding */
+    padding: 20px 0; /* เพิ่ม padding ให้ header สูงขึ้น */
     text-align: center;
     width: 100%; /* ทำให้ header เต็มความกว้าง */
+    margin: 0; /* ลบ margin เพื่อให้ชิดด้านบน */
 }
 
 header h1 {
     font-size: 2.5em;
-    margin: 0; /* ลบ margin เพื่อให้เต็มความกว้าง */
-    padding: 0; /* ลบ padding เพื่อให้เต็มความกว้าง */
-    width: 100%; /* ทำให้ h1 เต็มความกว้าง */
+    margin: 0;
+}
+
+nav {
+    width: 100%;
+    margin: 0;
 }
 
 nav ul {
     list-style-type: none;
     padding: 0;
-    margin: 10px 0;
+    margin: 0;
     display: flex;
     justify-content: center;
     background-color: rgba(59, 59, 59, 0.9);
+    width: 100%;
 }
 
 nav ul li {
@@ -111,7 +116,6 @@ footer {
     color: #ffffff;
     text-align: center;
     padding: 15px;
-    margin-top: 0; 
     font-size: 0.9em;
 }
 
