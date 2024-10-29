@@ -8,6 +8,7 @@ html, body {
     height: 100%; 
     display: flex; 
     flex-direction: column; 
+    width: 100%;
 }
 
 body {
@@ -23,30 +24,29 @@ body {
 header {
     background-color: rgba(24, 17, 17, 0.8); 
     color: #ffffff;
-    padding: 20px 0; /* เพิ่ม padding ให้ header สูงขึ้น */
+    padding: 10px; 
     text-align: center;
-    width: 100%; /* ทำให้ header เต็มความกว้าง */
-    margin: 0; /* ลบ margin เพื่อให้ชิดด้านบน */
+    width: 100vw; 
 }
 
 header h1 {
     font-size: 2.5em;
-    margin: 0;
+    margin: 0; 
+    padding: 0; 
+    width: 100%; 
 }
 
 nav {
-    width: 100%;
-    margin: 0;
+    width: 100vw; 
 }
 
 nav ul {
     list-style-type: none;
     padding: 0;
-    margin: 0;
+    margin: 10px 0;
     display: flex;
     justify-content: center;
     background-color: rgba(59, 59, 59, 0.9);
-    width: 100%;
 }
 
 nav ul li {
@@ -116,6 +116,7 @@ footer {
     color: #ffffff;
     text-align: center;
     padding: 15px;
+    margin-top: 0; 
     font-size: 0.9em;
 }
 

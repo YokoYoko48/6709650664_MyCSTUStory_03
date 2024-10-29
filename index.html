@@ -5,6 +5,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My CSTU Story</title>
     <link rel="stylesheet" href="mystyle.css">
+    <style>
+        /* กำหนด iframe ให้ responsive */
+        .video-container {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            height: 0;
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        /* ปรับขนาดสไลด์โชว์และรูปภาพ */
+        .slideshow-container {
+            max-width: 100%;
+            position: relative;
+            margin: auto;
+        }
+
+        .mySlides img {
+            width: 100%; /* ปรับขนาดรูปภาพในสไลด์ */
+            max-width: 300px; /* กำหนดขนาดสูงสุด */
+            height: auto;
+        }
+
+        /* ปรับขนาดและการจัดวางองค์ประกอบสำหรับหน้าจอขนาดเล็ก */
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 1.5em;
+            }
+
+            nav ul {
+                flex-direction: column;
+            }
+
+            .mySlides img {
+                width: 80%;
+            }
+        }
+    </style>
 </head>
 <body>
 
@@ -15,56 +62,58 @@
     <nav>
         <ul>
             <li><a href="index.html">Homepage</a></li>
-                <li><a href="myjourney.html">My Journey</a></li>
-                <li><a href="myfuture.html">My Future</a></li>
+            <li><a href="myjourney.html">My Journey</a></li>
+            <li><a href="myfuture.html">My Future</a></li>
             <li><a href="https://www.youtube.com/@setthayotpanthong2881">My Projects</a></li>
             <li><a href="https://www.instagram.com/setthayot_pt/">Contact</a></li>
         </ul>
     </nav>
 
     <section>
-        <center><h2>About Me</h2>
-            <p>Hello! My name is Setthayot Panthong, and this is my story at CSTU.</p>
-          </center>
-      
         <center>
-          <iframe width="700" height="400" src="resources/myvideo.mp4" frameborder="0"></iframe>
+            <h2>About Me</h2>
+            <p>Hello! My name is Setthayot Panthong, and this is my story at CSTU.</p>
+        </center>
+
+        <!-- วางวิดีโอในคอนเทนเนอร์เพื่อให้ responsive -->
+        <center>
+            <div class="video-container">
+                <iframe src="resources/myvideo.mp4" frameborder="0" allowfullscreen></iframe>
+            </div>
         </center>
         
-          <div class="slideshow-container">
-
+        <div class="slideshow-container">
             <div class="mySlides fade">
-              <img src="resources/myself.image.jpg.jpg" style="width:25%">
+                <img src="resources/myself.image.jpg.jpg" alt="Myself Image">
             </div>
-          
             <div class="mySlides fade">
-              <img src="resources/453163082_524926493235131_2648095087364348061_n.jpg" style="width:25%">
+                <img src="resources/453163082_524926493235131_2648095087364348061_n.jpg" alt="Image 1">
             </div>
-          
             <div class="mySlides fade">
-              <img src="resources/457014401_482627967895161_5308398754122773960_n.jpg" style="width:30%" height="200">
+                <img src="resources/457014401_482627967895161_5308398754122773960_n.jpg" alt="Image 2">
             </div>
+        </div>
           
-          </div>
+        <script>
+            let slideIndex = 0;
+            showSlides();
           
-          <script>
-          let slideIndex = 0;
-          showSlides();
-          
-          function showSlides() {
-            let i;
-            let slides = document.getElementsByClassName("mySlides");
-            for (i = 0; i < slides.length; i++) {
-              slides[i].style.display = "none";  
+            function showSlides() {
+                let i;
+                let slides = document.getElementsByClassName("mySlides");
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";  
+                }
+                slideIndex++;
+                if (slideIndex > slides.length) {slideIndex = 1}    
+                slides[slideIndex-1].style.display = "block";  
+                setTimeout(showSlides, 2000); 
             }
-            slideIndex++;
-            if (slideIndex > slides.length) {slideIndex = 1}    
-            slides[slideIndex-1].style.display = "block";  
-            setTimeout(showSlides, 2000); 
-          }
-          </script>
+        </script>
 
-        <center><p><b>I am studying in the Computer Science program at CSTU, where I have learned about various topics such as programming, web development, and more.</b></p></center>
+        <center>
+            <p><b>I am studying in the Computer Science program at CSTU, where I have learned about various topics such as programming, web development, and more.</b></p>
+        </center>
     </section>
 
     <footer>
